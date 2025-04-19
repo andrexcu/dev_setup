@@ -1,0 +1,77 @@
+#background_overlay {
+  transition: filter 0.5s ease-in-out;
+}
+
+html:has(#searchbar:focus) {
+  #background_overlay {
+    filter: blur(10px);
+  }
+
+  --searchbar-width: 24em !important;
+}
+
+#linkblocks span,
+#interface,
+#credit,
+#credit a {
+  color: #d3d3d3;
+}
+
+#searchbar {
+  outline: none;
+}
+
+#searchbar::placeholder {
+  text-align: center;
+}
+
+
+
+#interface #greetings:before {
+  content: "「Welcome To Zen.」";
+  visibility: visible;
+  position: absolute;
+  top: 1em;
+  left: -0.6em;
+  width: 100%;
+
+
+  text-transform: none;
+  white-space: nowrap;
+  opacity: 75%;
+}
+
+#interface #greetings {
+  visibility: hidden;
+  position: relative;
+}
+
+#quote {
+  opacity: 0.75 !important;
+}
+#author {
+  opacity: 0.75 !important;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+h1,
+h2,
+h3 {
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+}
