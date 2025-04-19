@@ -1,0 +1,57 @@
+@import "Nebula/Nebula.css";
+@import "Nebula/Nebula-config.css";
+
+/* ----------------------- my customizations ----------------------- */
+.titlebar-buttonbox-container {
+    order: -1 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .titlebar-buttonbox {
+    flex-direction: row-reverse !important;
+  }
+
+  * {
+    font-family: "MonoLisa", monospace !important;
+    font-feature-settings: "ss08" 1, "liga" 1, "calt" 1;
+    letter-spacing: -0.5px !important;
+  }
+
+  /* center the urlbar */
+  #urlbar:not([focused]) .urlbar-input {
+    text-align: center !important;
+  }
+
+  #urlbar .urlbar-input {
+    padding-left: 4px !important;
+  }
+
+  #urlbar[focused] .urlbar-input {
+    font-size: 14px !important;
+  }
+
+  /* Hide URL bar icons */
+  #star-button-box {
+    z-index: 999;
+    opacity: 0.8 !important;
+  }
+  #picture-in-picture-button {
+    z-index: 999;
+    margin-right: 4px !important;
+    opacity: 0.8 !important;
+  }
+  #urlbar {
+    & #star-button-box,
+    #tracking-protection-icon-container,
+    #identity-icon-box,
+    #identity-box {
+      display: hidden;
+    }
+  }
+
+  #tracking-protection-icon-container,
+  #identity-icon-box,
+  #identity-box {
+    display: none;
+  }
