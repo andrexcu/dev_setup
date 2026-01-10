@@ -1,8 +1,7 @@
 @import "Nebula/Nebula.css";
-@import "Nebula/Nebula-config.css";
 
 /* ----------------------- my customizations ----------------------- */
-.titlebar-buttonbox-container {
+/* .titlebar-buttonbox-container {
     order: -1 !important;
     margin-right: 0 !important;
     margin-left: 0 !important;
@@ -10,16 +9,27 @@
 
   .titlebar-buttonbox {
     flex-direction: row-reverse !important;
-  }
+    overflow: hidden;
+  } */
 
-  * {
+  /* * {
+    font-family: "MonoLisa", monospace !important;
+    font-family: sans-serif !important;
+    font-feature-settings: "ss08" 1, "liga" 1, "calt" 1;
+    letter-spacing: -0.5px !important;
+  } */
+
+  /* Apply MonoLisa everywhere EXCEPT titlebar buttons */
+    :root:not(.titlebar-button),
+    *:not(.titlebar-button) {
     font-family: "MonoLisa", monospace !important;
     font-feature-settings: "ss08" 1, "liga" 1, "calt" 1;
     letter-spacing: -0.5px !important;
-  }
-
-  /* center the urlbar */
-  #urlbar:not([focused]) .urlbar-input {
+    }
+    .titlebar-button > .toolbarbutton-icon {
+    display: none !important;
+    }
+  /* #urlbar:not([focused]) .urlbar-input {
     text-align: center !important;
   }
 
@@ -31,16 +41,17 @@
     font-size: 14px !important;
   }
 
-  /* Hide URL bar icons */
   #star-button-box {
     z-index: 999;
     opacity: 0.8 !important;
   }
+
   #picture-in-picture-button {
     z-index: 999;
     margin-right: 4px !important;
     opacity: 0.8 !important;
   }
+
   #urlbar {
     & #star-button-box,
     #tracking-protection-icon-container,
@@ -54,4 +65,44 @@
   #identity-icon-box,
   #identity-box {
     display: none;
+  } */
+:root {
+  /* thin */
+  --urlbar-height: 28px !important;
+  --urlbar-container-height: 28px !important;
+  --zen-toolbar-height: 35px !important;
+  --urlbar-min-height: 28px !important;
+  /* thinner */
+  @media (-moz-bool-pref: "theme.thin_toolbar.thinner") {
+    --urlbar-height: 26px !important;
+    --urlbar-container-height: 26px !important;
+    --zen-toolbar-height: 32px !important;
+    --urlbar-min-height: 26px !important;
   }
+}
+#urlbar {
+  /* thin */
+  --urlbar-height: 28px !important;
+  /* thinner */
+  @media (-moz-bool-pref: "theme.thin_toolbar.thinner") {
+    --urlbar-height: 26px !important;
+  }
+}
+#urlbar-container {
+  /* thin */
+  --urlbar-container-height: 28px !important;
+  /* thinner */
+  @media (-moz-bool-pref: "theme.thin_toolbar.thinner") {
+    --urlbar-container-height: 26px !important;
+  }
+}
+.urlbar-input-container {
+  align-items: center;
+}
+#identity-icon-label {
+  padding-inline-start: 2px !important;
+  font-size: 0.95em;
+}
+#identity-box > * {
+  padding: 2px 8px;
+}
