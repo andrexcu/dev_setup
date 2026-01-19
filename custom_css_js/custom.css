@@ -10,25 +10,26 @@
 /* === Editor Background & Shadows === */
 /* Apply background to empty editor group */
 .editor-group-container.empty {
-    background-color: rgba(30, 31, 41, 0.6) !important;
-  }
+  background-color: rgba(30, 31, 41, 0.6) !important;
+}
 
 /* === Findbar=== */
-.monaco-inputbox>.ibwrapper {
-    background-color: rgba(0, 0, 0, 0.42) !important;
+.monaco-inputbox > .ibwrapper {
+  background-color: rgba(0, 0, 0, 0.42) !important;
 }
 
 /* === Project Title === */
 .titlebar-center > .window-title {
-    background-color: rgba(0,0,0,0.42) !important;
-    padding: 0 10px !important;
-    border-radius: 8px !important;
+  background-color: rgba(0, 0, 0, 0.42) !important;
+  padding: 0 10px !important;
+  border-radius: 8px !important;
 }
 
 .editor-container {
   background-color: rgba(30, 31, 41, 0.57) !important;
-} */
-.monaco-editor .scroll-decoration,
+}
+
+*/ .monaco-editor .scroll-decoration,
 .monaco-scrollable-element > .shadow.top {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.7) !important;
   top: -6px !important;
